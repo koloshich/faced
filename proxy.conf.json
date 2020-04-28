@@ -6,5 +6,18 @@
       "^/prophecies" : "/prophecy-database"
     },
     "changeOrigin": true
+  },
+  "/items": {
+    "target": "https://api.poe.watch",
+    "secure": true,
+    "pathRewrite":{
+      "^/prophecies" : "/itemsdata"
+    },
+    "changeOrigin": true
+  },
+  "/compact": {
+    "target": "https://api.poe.watch",
+    "secure": true,
+    "changeOrigin": true
   }
 }

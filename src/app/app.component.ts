@@ -1,3 +1,4 @@
+import { ItemService } from './item.service';
 import { map } from 'rxjs/operators';
 import { PropheciesService, Prophecy } from './prophecies.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
 
   prophecies: Prophecy[] = [];
 
-  constructor(private propheciesService: PropheciesService) {
+  constructor(private propheciesService: PropheciesService, private itemService: ItemService) {
 
   }
 
@@ -27,5 +28,9 @@ export class AppComponent implements OnInit {
 
   trackBy(index, item) {
     return index;
+  }
+
+  getPrice(name: string) {
+    return this.itemService.getItemPrice(name);
   }
 }
