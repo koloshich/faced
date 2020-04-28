@@ -3,14 +3,20 @@
     <tr>
       <th>Name</th>
       <th>Source</th>
+      <th>Price</th>
       <th>Target</th>
+      <th>Price</th>
+      <th>Profit</th>
     </tr>
   </thead>
   <tbody>
   <tr *ngFor="let prophecy of prophecies; trackBy: trackBy">
     <td>{{prophecy.name}}</td>
     <td>{{prophecy.sourceItem}}</td>
+    <td>{{getPrice(prophecy.sourceItem) | async}}</td>
     <td>{{prophecy.targetItem}}</td>
+    <td>{{getPrice(prophecy.targetItem) | async}}</td>
+    <td>{{(getPrice(prophecy.targetItem) | async) - (getPrice(prophecy.sourceItem) | async)}}</td>
   </tr>
 </tbody>
 </table>

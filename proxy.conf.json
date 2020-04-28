@@ -7,12 +7,9 @@
     },
     "changeOrigin": true
   },
-  "/items": {
+  "/itemdata": {
     "target": "https://api.poe.watch",
     "secure": true,
-    "pathRewrite":{
-      "^/prophecies" : "/itemsdata"
-    },
     "changeOrigin": true
   },
   "/compact": {

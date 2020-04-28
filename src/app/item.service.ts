@@ -17,6 +17,7 @@ export class ItemService {
   pricesMap: Map<number, any>;
 
   constructor(private httpClient: HttpClient) {
+    this.load();
   }
 
   load() {
@@ -37,7 +38,7 @@ export class ItemService {
   }
 
   loadItems() {
-    return this.httpClient.get('/items').pipe(
+    return this.httpClient.get('/itemdata').pipe(
       tap((items: Item[]) => {
         this.itemsMap = items.reduce((map, item) => {
           map.set(item.name, item);
