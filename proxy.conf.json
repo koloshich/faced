@@ -1,0 +1,10 @@
+{
+  "/prophecies": {
+    "target": "https://www.poelab.com",
+    "secure": true,
+    "pathRewrite":{
+      "^/prophecies" : "/prophecy-database"
+    },
+    "changeOrigin": true
+  }
+}

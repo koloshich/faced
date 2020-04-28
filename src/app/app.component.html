@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Source</th>
+      <th>Target</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let prophecy of prophecies; trackBy: trackBy">
+    <td>{{prophecy.name}}</td>
+    <td>{{prophecy.sourceItem}}</td>
+    <td>{{prophecy.targetItem}}</td>
+  </tr>
+</tbody>
+</table>
